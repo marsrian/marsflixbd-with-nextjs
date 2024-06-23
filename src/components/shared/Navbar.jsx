@@ -36,7 +36,7 @@ const Navbar = () => {
         isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
       }`}
     >
-      <div className="flex flex-row items-center justify-between border-b border-b-gray-400 px-4 py-2">
+      <div className="flex flex-row items-center justify-between shadow-md border-b-gray-400 px-4 py-2">
         <h3 className="text-lg font-extrabold text-gray-900 dark:text-white">
           MarsFlixBD
         </h3>
@@ -62,7 +62,8 @@ const Navbar = () => {
         </ul>
 
         {/* For Mobile */}
-        <div className="flex md:hidden">
+        <div className="flex gap-2 items-center md:hidden">
+          <ModeToggle />
           {isOpen ? (
             <button
               onClick={handleToggle}
@@ -72,7 +73,7 @@ const Navbar = () => {
             </button>
           ) : (
             <>
-              <div className="absolute top-[44px] w-60 left-0 h-[600px] p-4 bg-gray-800 text-white font-semibold text-lg duration-1000 md:hidden">
+              <div className="absolute top-[55px] w-60 left-0 h-[600px] p-4 bg-gray-800 text-white font-semibold text-lg duration-1000 md:hidden">
                 <ul className="flex flex-col gap-3 mt-12">
                   <Link
                     href="/"
@@ -81,24 +82,44 @@ const Navbar = () => {
                     <li>Home</li>
                   </Link>
                   <Link
-                    href="/games"
+                    href="/bangla-movie"
                     className={
-                      pathName === "/games" || pathName.includes("games/")
+                      pathName === "/bangla-movie" || pathName.includes("bangla-movie/")
                         ? "text-green-300"
                         : ""
                     }
                   >
-                    <li>Games</li>
+                    <li>Bangla Movie</li>
                   </Link>
                   <Link
-                    href="/blog"
+                    href="/bollywood-movie"
                     className={
-                      pathName === "/blog" || pathName.includes("blog/")
+                      pathName === "/bollywood-movie" || pathName.includes("bollywood-movie/")
                         ? "text-green-300"
                         : ""
                     }
                   >
-                    <li>Blog</li>
+                    <li>Bollywood Movie</li>
+                  </Link>
+                  <Link
+                    href="/hollywood-movie"
+                    className={
+                      pathName === "/bollywood-movie" || pathName.includes("hollywood-movie/")
+                        ? "text-green-300"
+                        : ""
+                    }
+                  >
+                    <li>Hollywood Movie</li>
+                  </Link>
+                  <Link
+                    href="/dashboard/bangla-movie"
+                    className={
+                      pathName === "/dashboard/bangla-movie" || pathName.includes("dashboard/bangla-movie/")
+                        ? "text-green-300"
+                        : ""
+                    }
+                  >
+                    <li>Dashboard</li>
                   </Link>
                   {/* {data.admin === true && (
                     <Link
