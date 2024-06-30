@@ -87,9 +87,9 @@ const Navbar = () => {
             <>
               <li>
                 <Link
-                  href="/dashboard"
+                  href="/dashboard/bangla-movie"
                   className={
-                    pathName === "/dashboard" ? "text-green-600 font-bold" : ""
+                    pathName === "/dashboard/bangla-movie" ? "text-green-600 font-bold" : ""
                   }
                 >
                   Dashboard
@@ -222,9 +222,9 @@ const Navbar = () => {
                     <>
                       <li>
                         <Link
-                          href="/dashboard"
+                          href="/dashboard/bangla-movie"
                           className={
-                            pathName === "/dashboard"
+                            pathName === "/dashboard/bangla-movie"
                               ? "text-green-600 font-bold"
                               : ""
                           }
