@@ -8,15 +8,15 @@ const BanglaMoviePage = async () => {
   const { banglaMovies } = await getBanglaMovies();
 
   return (
-    <div className="px-2 md:px-6 mt-4 md:mt-8">
+    <div className="">
       <h1 className="border-l-4 border-l-red-600 pl-2 text-xl md:text-3xl font-semibold text-blue-gray-800 dark:text-white">
         Bangla Movie: {banglaMovies?.length}
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
         {banglaMovies?.map((banglaMovie) => (
           <Link
             href={`bangla-movie/${banglaMovie._id}`}
-            className="group block border-1 shadow-xl shadow-slate-600 hover:opacity-90 overflow-x-hidden mt-2"
+            className="group block border-1 shadow-md shadow-slate-600 hover:opacity-90 overflow-x-hidden mt-2"
             key={banglaMovie._id}
           >
             <div className="relative">
@@ -25,7 +25,7 @@ const BanglaMoviePage = async () => {
                 width={250}
                 height={300}
                 alt={banglaMovie.moviePoster}
-                className="h-80 transition-transform hover:opacity-50 w-full"
+                className="h-40 md:h-80 transition-transform hover:opacity-50 w-full"
               />
               <h3 className="absolute opacity-0 group-hover:opacity-100 top-2/4 right-1/2 text-3xl font-bold">
                 <FaPlay />
