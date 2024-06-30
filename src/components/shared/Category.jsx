@@ -3,7 +3,7 @@ import React from 'react'
 
 const Category = () => {
   return (
-    <div className='md:border-l px-4 mt-12 md:mt-0'>
+    <div className='md:border-l md:px-4 mt-12 md:mt-0'>
       <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>Movie Category: </h3>
       <ul className='flex flex-col space-y-2 mt-3'>
         <Link href="/bangla-movie"><li>Bangla Movie</li></Link>
