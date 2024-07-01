@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ModeToggle from "./ModeToggle";
 import { FaAlignRight, FaTimes } from "react-icons/fa";
-import { usePathname, usepathName } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import demoImage from "/public/img/demo_image.jpg";
@@ -83,13 +83,23 @@ const Navbar = () => {
           <li>
             <Link href="/hollywood-movie">Hollywood Movie</Link>
           </li>
+          <li>
+            <Link
+              href="/blog"
+              className={pathName === "/blog" ? "text-green-600" : ""}
+            >
+              Blog
+            </Link>
+          </li>
           {session?.user ? (
             <>
               <li>
                 <Link
                   href="/dashboard/bangla-movie"
                   className={
-                    pathName === "/dashboard/bangla-movie" ? "text-green-600 font-bold" : ""
+                    pathName === "/dashboard/bangla-movie"
+                      ? "text-green-600 font-bold"
+                      : ""
                   }
                 >
                   Dashboard
@@ -218,6 +228,14 @@ const Navbar = () => {
                   >
                     <li>Hollywood Movie</li>
                   </Link>
+                  <li>
+                    <Link
+                      href="/blog"
+                      className={pathName === "/blog" ? "text-green-600" : ""}
+                    >
+                      Blog
+                    </Link>
+                  </li>
                   {session?.user ? (
                     <>
                       <li>

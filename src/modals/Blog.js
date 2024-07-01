@@ -34,11 +34,13 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: [
-        "Songbirds",
-        "Waterfowl",
-        "Parrots",
-        "Seabirds",
-        "Gamebirds",
+        "BanglaMovie",
+        "BollywoodMovie",
+        "HollywoodMovie",
+        "BanglaWebSeries",
+        "HindiWebSeries",
+        "AnimeMovie",
+        "AnimeSeries",
       ],
     },
     authorId: {
